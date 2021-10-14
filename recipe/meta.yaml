@@ -1,5 +1,5 @@
 {% set name = "adb-shell" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/adb_shell-{{ version }}.tar.gz
-  sha256: ffcc7042a5102b36c5cbb85b5389e482255c78ecbe0d963e92dcc97b7ee14e68
+  sha256: 04624ee0d6898fcda03d86e703b9bfea4a1b0c225be7e40767b6f08386902e88
 
 build:
   number: 0
@@ -39,7 +39,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'A Python implementation of ADB with shell and FileSync functionality.'
+  summary: A Python implementation of ADB with shell and FileSync functionality.
   description: |
     This Python package implements ADB shell and FileSync functionality. 
     It originated from python-adb.
