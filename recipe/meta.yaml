@@ -1,5 +1,5 @@
 {% set name = "adb-shell" %}
-{% set version = "0.4.3" %}
+{% set version = "0.4.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/adb_shell-{{ version }}.tar.gz
-  sha256: 1cc7847cbd901b1419fe48664bffbe2481b4fa1bba03fe3074abd97228535a82
+  sha256: 04c305f30a2ca25d5c54b3cd6ce9bb64c36e5f07967b23b3fb6aaecc851b90b6
 
 build:
   number: 0

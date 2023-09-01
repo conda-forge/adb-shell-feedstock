@@ -1,11 +1,11 @@
-About adb-shell
-===============
+About adb-shell-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/adb-shell-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/JeffLIrion/adb_shell
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/adb-shell-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Python implementation of ADB with shell and FileSync functionality.
 
