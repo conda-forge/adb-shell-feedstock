@@ -1,0 +1,54 @@
+schema_version: 1
+
+context:
+  name: adb-shell
+  version: 0.4.4
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/adb_shell-${{ version }}.tar.gz
+  sha256: 04c305f30a2ca25d5c54b3cd6ce9bb64c36e5f07967b23b3fb6aaecc851b90b6
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - cryptography
+    - pyasn1
+    - python >=${{ python_min }}
+    - rsa
+
+tests:
+  - python:
+      imports:
+        - adb_shell
+        - adb_shell.auth
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: A Python implementation of ADB with shell and FileSync functionality.
+  description: |
+    This Python package implements ADB shell and FileSync functionality.
+    It originated from python-adb.
+  homepage: https://github.com/JeffLIrion/adb_shell
+  repository: https://github.com/JeffLIrion/adb_shell
+  documentation: https://adb-shell.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
